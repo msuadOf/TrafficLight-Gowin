@@ -55,6 +55,9 @@ class GowinToolchain(GenericToolchain):
         tools.replace_in_file(v_file, "[1:0] IO_psram_rwds,", "[1:0] IO_psram_rwds, /* synthesis syn_tristate = 1 */")
         tools.replace_in_file(v_file, "[15:0] IO_psram_dq,",    "[15:0] IO_psram_dq,  /* synthesis syn_tristate = 1 */")
 
+        # Adapt Chisel Firrtl
+        tools.replace_in_file(v_file, " logic ",    " reg ")
+
     # Constraints (.cst ) --------------------------------------------------------------------------
 
     def build_io_constraints(self):

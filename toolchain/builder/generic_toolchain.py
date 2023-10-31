@@ -164,7 +164,7 @@ class GenericToolchain:
 
         os.chdir(cwd)
 
-        return v_output.ns
+#        return v_output.ns
 
     def add_period_constraint(self, platform, clk, period, keep=True, name=None):
         if clk is None:

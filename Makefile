@@ -5,6 +5,10 @@ export PATH := $(PATH):$(abspath ./utils)
 test:
 	mill -i __.test
 
+load:verilog
+	echo "" > $(BUILD_DIR)/top.sdc
+	python3 -m toolchain.build
+
 verilog:
 	mkdir -p $(BUILD_DIR)
 # mill -i __.test.runMain Elaborate -td $(BUILD_DIR)
