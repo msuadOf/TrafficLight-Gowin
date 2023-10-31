@@ -1,3 +1,7 @@
 ISE.tar
 Gowin.tar.gz
 libftd2xx-x86_64.tgz
+build/
+__pycache__/
+*pyc
+venv/
